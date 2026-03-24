@@ -19,12 +19,16 @@ function createFirework() {
         let dot = document.createElement("div");
         dot.classList.add("firework");
 
-        let x = (Math.random() - 0.5) * 200 + "px";
-        let y = (Math.random() - 0.5) * 200 + "px";
+        // Adjust explosion range for desktop/mobile
+        let range = window.innerWidth < 600 ? 100 : 200;
+        let x = (Math.random() - 0.5) * range + "px";
+        let y = (Math.random() - 0.5) * range + "px";
 
+        // Position dot randomly on the screen
         dot.style.left = Math.random() * 100 + "%";
         dot.style.top = Math.random() * 100 + "%";
 
+        // Set explode offsets
         dot.style.setProperty("--x", x);
         dot.style.setProperty("--y", y);
 
