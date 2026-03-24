@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: black;
+    color: white;
+    overflow: hidden;
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    border: none;
+    background: #ff4d6d;
+    color: white;
+    cursor: pointer;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Balloons */
+.balloons {
+    position: absolute;
+    bottom: -100px;
+    width: 100%;
+}
+
+.balloon {
+    width: 40px;
+    height: 60px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+    animation: float 6s infinite;
+}
+
+.balloon:nth-child(2) {
+    left: 40%;
+    background: blue;
+    animation-delay: 2s;
+}
+
+.balloon:nth-child(3) {
+    left: 70%;
+    background: yellow;
+    animation-delay: 4s;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-800px); }
+}
+
+/* Fireworks */
+.firework {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    animation: explode 1s ease-out forwards;
+}
+
+@keyframes explode {
+    to {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
+
+/* 📸 PHOTOS (FIXED PROPERLY) */
+.photo-container {
+    position: absolute;
+    top: 60%;               /* move to middle */
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    display: none;
+}
+
+.photo {
+    position: absolute;
+    width: 190px;           /* bigger size */
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.6);
+    animation: floatReal 2.5s ease-out forwards;
+    opacity: 0;
+}
+
+/* Better centered spacing */
+.photo:nth-child(1) { left: 20%; animation-delay: 0s; }
+.photo:nth-child(2) { left: 40%; animation-delay: 0.3s; }
+.photo:nth-child(3) { left: 60%; animation-delay: 0.6s; }
+.photo:nth-child(4) { left: 80%; animation-delay: 0.9s; }
+
+/* Smooth entrance + settle in middle */
+@keyframes floatReal {
+    0% {
+        transform: translateY(100px) scale(0.8);
+        opacity: 0;
+    }
+    60% {
+        transform: translateY(-20px) scale(1.05);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+}

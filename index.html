@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Happy Birthday Bro 🎉</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 id="title">Hey Bro 👀</h1>
+    <p>Click below… something’s waiting 🎁</p>
+
+    <button onclick="startParty()">Start 🎉</button>
+
+    <!-- 📸 Photos (ADDED HERE) -->
+    <div class="photo-container">
+        <img src="bro1.jpeg" class="photo">
+        <img src="bro2.jpeg" class="photo">
+        <img src="bro3.jpeg" class="photo">
+        <img src="bro4.jpeg" class="photo">
+    </div>
+
+    <!-- Balloons -->
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+
+    <!-- Surprise -->
+    <div id="surprise" class="hidden">
+        <h2>🎉 happy birthday brother from other mother!  🎉</h2>
+        <p>You’re my brother… but also my best friend , do you still rember our first meet at aluva.. 😎</p>
+        <p>gonna miss you bruh... if i have a second life, i will be defnetly you lil broo! </p>
+    </div>
+
+    <!-- Music -->
+    <audio id="music" loop>
+        <source src="music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
