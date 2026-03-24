@@ -71,10 +71,10 @@ button {
     }
 }
 
-/* 📸 PHOTOS (FIXED PROPERLY) */
+/* Photos */
 .photo-container {
     position: absolute;
-    top: 60%;               /* move to middle */
+    top: 60%;  /* move to middle */
     left: 0;
     width: 100%;
     transform: translateY(-50%);
@@ -83,7 +83,7 @@ button {
 
 .photo {
     position: absolute;
-    width: 190px;           /* bigger size */
+    width: 190px;  /* bigger size */
     height: auto;
     border-radius: 15px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.6);
@@ -110,5 +110,26 @@ button {
     100% {
         transform: translateY(0) scale(1);
         opacity: 1;
+    }
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;  /* text bigger on small screens */
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 16px;
+    }
+
+    .photo {
+        width: 120px;  /* smaller photos for phone */
+    }
+
+    .balloon {
+        width: 25px;
+        height: 40px;
     }
 }
