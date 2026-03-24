@@ -22,8 +22,8 @@ function createFirework() {
         let x = (Math.random() - 0.5) * 200 + "px";
         let y = (Math.random() - 0.5) * 200 + "px";
 
-        dot.style.left = Math.random() * window.innerWidth + "px";
-        dot.style.top = Math.random() * window.innerHeight + "px";
+        dot.style.left = Math.random() * 100 + "%";
+        dot.style.top = Math.random() * 100 + "%";
 
         dot.style.setProperty("--x", x);
         dot.style.setProperty("--y", y);
